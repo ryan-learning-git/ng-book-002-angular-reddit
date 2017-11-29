@@ -6,6 +6,7 @@
 </div>
 <div class="twelve wide column">
   <a class="ui large header" href="{{ article.link }}" target="_blank">{{ article.title }}</a>
+  <div class="meta">({{ article.domain() }})</div>
   <ul>
     <li class="item">
       <a class="link" (click)="voteUp()">
