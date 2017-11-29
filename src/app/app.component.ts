@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Article} from './article/article.model';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  articles: Article[]; // aka Array<Article>
+
+  constructor() {
+    this.articles = [
+      new Article('Angular 5', 'http://angular.io', 3),
+      new Article('Fullstack', 'http://fullstack.io', 2),
+      new Article('Angular Homepage', 'http://angular.io', 1),
+    ];
+  }
+
   addArticle(title: HTMLInputElement, link: HTMLInputElement): boolean {
-    console.log('Adding article with title ${title.value} and link ${link.value}');
+    console.log(`Adding article with title ${title.value} and link ${link.value}`);
+    return false;
   }
 
 }

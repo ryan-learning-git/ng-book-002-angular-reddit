@@ -1,5 +1,9 @@
 @import './app/vendor/semantic.min.css';
 
+.link {
+  cursor: pointer;
+}
+
 .ui.menu .item img.logo {
     margin-right: 1.5em;
 }
